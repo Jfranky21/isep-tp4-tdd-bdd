@@ -13,7 +13,7 @@ import org.junit.platform.suite.api.Suite;
  * src/test/resources/features avec les steps du package com.example.cucumber.
  * Rapport HTML généré dans target/cucumber-report.html.
  */
-@Suite
+@Suite(failIfNoTests = false) // pas d'erreur tant qu'aucun .feature n'existe
 @IncludeEngines("cucumber")
 @SelectClasspathResource("features")
 @ConfigurationParameter(key = PLUGIN_PROPERTY_NAME, value = "pretty,html:target/cucumber-report.html")
