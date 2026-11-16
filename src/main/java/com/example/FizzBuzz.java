@@ -3,15 +3,17 @@ package com.example;
 public class FizzBuzz {
 
     public String convert(int number) {
-        if (number % 15 == 0) {
-            return "FizzBuzz";
+        String result = "";
+        if (isMultipleOf(number, 3)) {
+            result += "Fizz";
         }
-        if (number % 3 == 0) {
-            return "Fizz";
+        if (isMultipleOf(number, 5)) {
+            result += "Buzz";
         }
-        if (number % 5 == 0) {
-            return "Buzz";
-        }
-        return String.valueOf(number);
+        return result.isEmpty() ? String.valueOf(number) : result;
+    }
+
+    private boolean isMultipleOf(int number, int divisor) {
+        return number % divisor == 0;
     }
 }
