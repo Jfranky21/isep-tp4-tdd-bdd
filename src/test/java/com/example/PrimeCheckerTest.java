@@ -28,4 +28,14 @@ public class PrimeCheckerTest {
     public void test3IsPrime() {
         assertTrue(primeChecker.isPrime(3), "3 should be considered a prime number");
     }
+
+    @Test
+    public void test4IsNotPrime() {
+        assertFalse(primeChecker.isPrime(4));
+    }
+
+    @Test
+    public void test5IsPrime() {
+        assertTrue(primeChecker.isPrime(5));
+    }
 }
