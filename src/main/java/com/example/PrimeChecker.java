@@ -2,12 +2,14 @@ package com.example;
 
 public class PrimeChecker {
 
+    private static final int SMALLEST_PRIME = 2;
+
     public boolean isPrime(int number) {
-        if (number < 2) {
+        if (number < SMALLEST_PRIME) {
             return false;
         }
-        for (int i = 2; i < number; i++) {
-            if (number % i == 0) {
+        for (int divisor = SMALLEST_PRIME; divisor * divisor <= number; divisor++) {
+            if (number % divisor == 0) {
                 return false;
             }
         }
