@@ -1,13 +1,16 @@
 package com.example;
 
-/** Exercice 1 : indique si un nombre est premier (à développer en TDD rouge/vert/bleu). */
 public class PrimeChecker {
 
-        
     public boolean isPrime(int number) {
-        if (number == 2 || number == 3) {
-            return true;
+        if (number < 2) {
+            return false;
         }
-        return false;
+        for (int i = 2; i < number; i++) {
+            if (number % i == 0) {
+                return false;
+            }
+        }
+        return true;
     }
 }
