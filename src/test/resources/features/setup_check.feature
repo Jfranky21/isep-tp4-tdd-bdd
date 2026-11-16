@@ -1,3 +1,4 @@
+# Scénario de vérification de l'installation : à supprimer avant le TP
 Feature: Setup check
   As a student
   I want to check that Cucumber runs in my environment

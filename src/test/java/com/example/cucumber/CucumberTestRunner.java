@@ -8,6 +8,11 @@ import org.junit.platform.suite.api.IncludeEngines;
 import org.junit.platform.suite.api.SelectClasspathResource;
 import org.junit.platform.suite.api.Suite;
 
+/**
+ * Point d'entrée Cucumber : lance tous les fichiers .feature du dossier
+ * src/test/resources/features avec les steps du package com.example.cucumber.
+ * Rapport HTML généré dans target/cucumber-report.html.
+ */
 @Suite
 @IncludeEngines("cucumber")
 @SelectClasspathResource("features")
