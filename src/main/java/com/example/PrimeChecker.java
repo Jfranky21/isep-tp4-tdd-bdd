@@ -4,7 +4,7 @@ package com.example;
 public class PrimeChecker {
 
     public boolean isPrime(int number) {
-        // Pas encore implémenté : point de départ du cycle rouge
-        throw new UnsupportedOperationException("Not implemented yet");
-    }
+        
+        return false;
+   }
 }
